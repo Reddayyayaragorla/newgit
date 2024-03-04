@@ -1,0 +1,82 @@
+$ git --version
+git version 2.38.1.windows.1
+
+$ git status 
+
+fatal: not a git repository (or any of the parent directories): .git
+
+ $ git init
+
+Initialized empty Git repository in C:/Users/yarag/.git/
+
+
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+$  ls -a
+./  ../  .git/
+
+$ git config --global user.name "Reddayya"
+
+$ git config --global user.email "reddayyayaragorla98@gmail.com"
+
+
+$ git config --list ( list all the files and see user name and user email)
+
+touch --> it is used for creating a file in local mechine.
+
+$ touch file1
+
+$ ls
+file1
+
+ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file1
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Note:---> now the file is in work space. we need to send that file to staging/indexing area. we can use a command , to send that file the command name is "git add filename".
+
+$ git add file1
+
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   file1
+
+
+Note:---> now the file is in staging/indexing area , we need to send tha file to local repo .we use a command [git commit -m "labelmessage"].
+
+$ git commit -m "first  commit"
+[master (root-commit) eff516e] first  commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file1
+
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+
+$ git log
+commit eff516e27df19aeaf49f110be2ac390d91b0b5cb (HEAD -> master)
+Author: Reddayya <reddayyayaragorla98@gmail.com>
+Date:   Fri Mar 1 22:58:09 2024 +0530
+
+    first  commit
+
+Note:--> now the file is in local repo . we can check the file by using git log command. we need to send the file  to central repo , here there is command that command is "git push "
+
